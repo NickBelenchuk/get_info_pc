@@ -9,8 +9,6 @@ A Windows-oriented Python project that gathers hardware and network information,
 - [▶️ Usage](#️-usage)
 - [📂 Project Structure](#-project-structure)
 - [📦 Building a Single EXE](#-building-a-single-exe)
-- [📜 License](#-license)
-- [👤 Author](#-author)
 
 ## 🌟 Features
 - Collects:
