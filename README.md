@@ -65,6 +65,7 @@ project_folder/
 ├── modules/
 │   ├── __init__.py           # (can be empty)
 │   ├── admin_utils.py        # Admin privilege checks and requests
+│   ├── admin_utils.py        # disk inf
 │   ├── system_info.py        # OS, CPU, and RAM details
 │   ├── hardware_info.py      # Motherboard, memory modules, video cards
 │   ├── network_info.py       # Network interfaces
