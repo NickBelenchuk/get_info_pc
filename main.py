@@ -10,6 +10,7 @@ from modules.hardware_info import (
 )
 from modules.network_info import get_network_info
 from modules.file_utils import save_to_file
+from modules.disk_info import get_physical_disk_info
 
 logging.basicConfig(
     filename='error_log.txt',
@@ -26,6 +27,7 @@ def main():
     info = {
         "System Information": get_system_info(),
         "Motherboard": get_motherboard_info(),
+        "Disk Information": get_physical_disk_info(),
         "Memory": get_memory_info(),
         "Video Cards": get_video_card_info(),
         "Network": get_network_info()

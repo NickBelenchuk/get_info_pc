@@ -9,13 +9,12 @@ A Windows-oriented Python project that gathers hardware and network information,
 - [▶️ Usage](#️-usage)
 - [📂 Project Structure](#-project-structure)
 - [📦 Building a Single EXE](#-building-a-single-exe)
-- [📜 License](#-license)
-- [👤 Author](#-author)
 
 ## 🌟 Features
 - Collects:
   - **System Information** (operating system, CPU, total/available RAM)
   - **Motherboard** (manufacturer, model, serial number)
+  - **Disk Information** (S/N, model, size, number of partitions, media type, interface version and type)
   - **Memory** (capacity, manufacturer, part number, speed, etc.)
   - **Video Cards** (name, driver version, video processor, memory)
   - **Network** (interfaces, MAC addresses, IP addresses)

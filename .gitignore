@@ -20,5 +20,6 @@ pip-wheel-metadata/
 error_log.txt
 
 system_info.json
-
 *.tmp
+
+use.txt
