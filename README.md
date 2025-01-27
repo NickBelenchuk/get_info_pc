@@ -69,6 +69,7 @@ project_folder/
 │   ├── system_info.py        # OS, CPU, and RAM details
 │   ├── hardware_info.py      # Motherboard, memory modules, video cards
 │   ├── network_info.py       # Network interfaces
+│   ├── psu_info.py           # Power Supply
 │   └── file_utils.py         # JSON file saving
 ├── requirements.txt
 └── README.md

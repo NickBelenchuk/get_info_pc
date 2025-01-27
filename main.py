@@ -11,6 +11,7 @@ from modules.hardware_info import (
 from modules.network_info import get_network_info
 from modules.file_utils import save_to_file
 from modules.disk_info import get_physical_disk_info
+from modules.psu_info import get_psu_info
 
 logging.basicConfig(
     filename='error_log.txt',
@@ -30,7 +31,8 @@ def main():
         "Disk Information": get_physical_disk_info(),
         "Memory": get_memory_info(),
         "Video Cards": get_video_card_info(),
-        "Network": get_network_info()
+        "Network": get_network_info(),
+        "Power Supply Unit": get_psu_info()
     }
 
     print(json.dumps(info, indent=4, ensure_ascii=False))
