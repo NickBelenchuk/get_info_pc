@@ -37,7 +37,7 @@ def main():
 
     print(json.dumps(info, indent=4, ensure_ascii=False))
 
-    save_to_file(info, "system_info.json")
+    save_to_file(info)
 
     input("\nPress Enter to exit...")
 
