@@ -53,7 +53,7 @@ pip install -r requirements.txt
  Run the script: ```python main.py```
 
 2. The script attempts to obtain administrator privileges on Windows.
-3. After it finishes, you will see JSON data in the console and the file `system_info.json` created in the current directory.
+3. A JSON file with system details will be saved in the system_info_files/ directory. (The filename follows the format: Manufacturer_Model_SerialNumber.json).
 4. Press **Enter** to exit.
 
 ## 📂 Project Structure
