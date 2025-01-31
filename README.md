@@ -17,9 +17,10 @@ A Windows-oriented Python project that gathers hardware and network information,
   - **Disk Information** (S/N, model, size, number of partitions, media type, interface version and type)
   - **Memory** (capacity, manufacturer, part number, speed, etc.)
   - **Video Cards** (name, driver version, video processor, memory)
-  - **Network** (interfaces, MAC addresses, IP addresses)
+  - **Network** (interfaces, MAC addresses, IP addresses, adapter names, serial numbers)
+  - **Power Supply Unit** (manufacturer, model, serial number)
 - Logs errors to `error_log.txt`.
-- Saves results to `system_info.json`.
+- Saves results to a JSON file in the `system_info_files/` directory.
 - Requests administrator privileges on Windows (if necessary).
 
 ## 🔧 Requirements
@@ -33,6 +34,8 @@ A Windows-oriented Python project that gathers hardware and network information,
 ## 📥 Installation
 ```bash
 # 1. Clone this repository or download the source code.
+git clone "repository_link"
+
 # 2. (Optional) Create and activate a virtual environment:
 python -m venv venv
 
@@ -50,47 +53,43 @@ pip install -r requirements.txt
 ```
 ## ▶️ Usage
 1. Open a terminal or command prompt in the project root (where main.py is located).
- Run the script: ```python main.py```
 
-2. The script attempts to obtain administrator privileges on Windows.
-3. A JSON file with system details will be saved in the system_info_files/ directory. (The filename follows the format: Manufacturer_Model_SerialNumber.json).
-4. Press **Enter** to exit.
+2. Run the script: (The script attempts to obtain administrator privileges on Windows.)
+```bash
+python main.py
+```
+3. A JSON file with system details will be saved in the system_info_files directory. (The filename follows the format: Manufacturer_Model_SerialNumber.json).
+
+4. Press Enter to exit.
 
 ## 📂 Project Structure
 ```bash
 project_folder/
 ├── main.py
-├── dist/
-│   └── main.exe              # The built executable (created after PyInstaller packaging)
+├── build/
+│   └── main/                 # Build files
 ├── modules/
 │   ├── __init__.py           # (can be empty)
 │   ├── admin_utils.py        # Admin privilege checks and requests
-│   ├── admin_utils.py        # disk inf
+│   ├── disk_info.py          # Disk information
 │   ├── system_info.py        # OS, CPU, and RAM details
 │   ├── hardware_info.py      # Motherboard, memory modules, video cards
 │   ├── network_info.py       # Network interfaces
 │   ├── psu_info.py           # Power Supply
 │   └── file_utils.py         # JSON file saving
 ├── requirements.txt
-└── README.md
+├── README.md
+└── system_info_files/        # Directory for saved JSON files
 ```
-## 📦 Building a Single EXE
-
+# 📦 Building a Single EXE
 ## To create a standalone .exe file for Windows using PyInstaller:
-1. Install PyInstaller:
-```bash
-pip install pyinstaller
-```
-2. Build a one-file executable:
-```bash
-pyinstaller --onefile main.py
-```
-* The resulting executable will be placed in the `dist/` folder (e.g., dist/main.exe).
 
-3. To run without a console window, add --noconsole:
-```bash
+Install PyInstaller:
+```bash 
 pyinstaller --onefile --noconsole main.py
 ```
-## Distributing the ```.exe```:
-* In most cases, you only need to provide the ```.exe``` file.
-* Ensure that the target machine has standard system libraries (e.g., Microsoft Visual C++ Redistributable).
+
+## Distributing the `.exe`:
+
+In most cases, you only need to provide the `.exe` file.
+Ensure that the target machine has standard system libraries (e.g., Microsoft Visual C++ Redistributable).
